@@ -245,7 +245,7 @@ class MainActivity : ComponentActivity(), PersistMapOwner {
 
                             thumbnailRoundnessKey -> {
                                 val thumbnailRoundness =
-                                    sharedPreferences.getEnum(key, ThumbnailRoundness.Light)
+                                    sharedPreferences.getEnum(key, ThumbnailRoundness.Medium)
 
                                 appearance = appearance.copy(
                                     thumbnailShape = thumbnailRoundness.shape()

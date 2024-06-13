@@ -5,7 +5,10 @@ enum class CoilDiskCacheMaxSize {
     `256MB`,
     `512MB`,
     `1GB`,
-    `2GB`;
+    `2GB`,
+    `4GB`,
+    Unlimited;
+
 
     val bytes: Long
         get() = when (this) {
@@ -14,5 +17,7 @@ enum class CoilDiskCacheMaxSize {
             `512MB` -> 512
             `1GB` -> 1024
             `2GB` -> 2048
+            `4GB` -> 4096
+            Unlimited -> 0
         } * 1000 * 1000L
 }
